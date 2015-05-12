@@ -1,0 +1,8 @@
+<page>
+	<property name="virtual">true</property>
+
+<generator name="cmisGenerator"/>
+<property name="servlet">cmisws10</property>
+<property name="cmisversion">1.0</property>
+
+</page>

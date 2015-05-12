@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans default-lazy-init="true">
+
+	<bean id="cmisService" class="org.netevolved.cmis.EnterMediaCmisService">
+				<property name="moduleManager"><ref bean="moduleManager" /></property>
+	
+	</bean>
+	
+	<bean id="cmisRepository" class="org.netevolved.cmis.CmisRepository">
+				<property name="moduleManager"><ref bean="moduleManager" /></property>
+	
+	</bean>
+	
+	
+	<bean id="cmisFactory" class="org.netevolved.cmis.EnterMediaCmisServiceFactory">
+			<property name="moduleManager"><ref bean="moduleManager" /></property>
+	
+	</bean>
+	
+	<bean id="cmisGenerator" class="org.netevolved.cmis.CMISGenerator">
+			<property name="moduleManager"><ref bean="moduleManager" /></property>
+	
+	</bean>
+	
+	<bean id="cmisws10" class="org.apache.chemistry.opencmis.server.impl.webservices.CmisWebServicesServlet">
+			<!-- <property name="cmisVersion"><value>1.0</value></property> -->
+	
+	</bean>
+<!-- 
+<bean id="CmisLifecycleBean" class="org.netevolved.CmisLifecycleBean">
+    <property name="cmisFactory" ref="cmisFactory" />
+</bean>
+ -->	
+ 
+ <bean id="CMISModule" class="org.netevolved.cmis.CMISModule">
+			<property name="moduleManager"><ref bean="moduleManager" /></property>
+	
+	</bean>
+
+</beans>
