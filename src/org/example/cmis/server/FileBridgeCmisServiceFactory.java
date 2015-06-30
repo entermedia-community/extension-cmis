@@ -38,18 +38,23 @@ import org.apache.chemistry.opencmis.server.support.wrapper.ConformanceCmisServi
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.openedit.ModuleManager;
+
 /**
  * FileShare Service Factory.
  */
 public class FileBridgeCmisServiceFactory extends AbstractServiceFactory {
 
+	
+	protected ModuleManager fieldModuleManager;
+	
     private static final Logger LOG = LoggerFactory.getLogger(FileBridgeCmisServiceFactory.class);
 
     private static final String PREFIX_LOGIN = "login.";
     private static final String PREFIX_REPOSITORY = "repository.";
     private static final String SUFFIX_READWRITE = ".readwrite";
     private static final String SUFFIX_READONLY = ".readonly";
-
+    
     /** Default maxItems value for getTypeChildren()}. */
     private static final BigInteger DEFAULT_MAX_ITEMS_TYPES = BigInteger.valueOf(50);
 
@@ -114,7 +119,7 @@ public class FileBridgeCmisServiceFactory extends AbstractServiceFactory {
         // authenticate the user
         // if the authentication fails, authenticate() throws a
         // CmisPermissionDeniedException
-        userManager.authenticate(context);
+        //userManager.authenticate(context);
 
         // get service object for this thread
         CallContextAwareCmisService service = threadLocalService.get();
@@ -219,4 +224,20 @@ public class FileBridgeCmisServiceFactory extends AbstractServiceFactory {
 
         return result;
     }
+
+	public ModuleManager getModuleManager() {
+		return fieldModuleManager;
+	}
+
+	public void setModuleManager(ModuleManager inModuleManager) {
+		fieldModuleManager = inModuleManager;
+	}
+
+	
+	public void addRepository(FileBridgeRepository fsr){
+        repositoryManager.addRepository(fsr);
+
+	}
+	
+	
 }

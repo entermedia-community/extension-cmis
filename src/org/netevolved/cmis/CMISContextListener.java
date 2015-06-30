@@ -1,24 +1,36 @@
 package org.netevolved.cmis;
 
+import java.util.HashMap;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import org.apache.chemistry.opencmis.commons.server.CmisServiceFactory;
 import org.apache.chemistry.opencmis.server.impl.CmisRepositoryContextListener;
+import org.example.cmis.server.FileBridgeCmisServiceFactory;
 
 public class CMISContextListener implements ServletContextListener   {
 
 	
-	
+	public static CmisServiceFactory emFactory  = null;
 
    
 
     public void contextInitialized(ServletContextEvent sce) {
       
         CmisServiceFactory factory = null;
-    	factory = new EnterMediaCmisServiceFactory();
+    	factory = new FileBridgeCmisServiceFactory();
 		sce.getServletContext().setAttribute(CmisRepositoryContextListener.SERVICES_FACTORY, factory);
 		
+		HashMap map = new HashMap();
+		
+		map.put("login.1","test:test");
+		map.put("repository.test","/home/ian");
+		map.put("repository.test.readwrite","test");
+		
+		
+		factory.init(map);
+		emFactory = factory; 
         //sce.getServletContext().setAttribute(SERVICES_FACTORY, factory);
     }
 
