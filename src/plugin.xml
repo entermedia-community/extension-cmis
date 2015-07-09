@@ -18,10 +18,6 @@
 	
 	</bean>
 	
-	<bean id="cmisGenerator" class="org.netevolved.cmis.CMISGenerator">
-			<property name="moduleManager"><ref bean="moduleManager" /></property>
-	
-	</bean>
 	
 	<bean id="cmisws10" class="org.apache.chemistry.opencmis.server.impl.webservices.CmisWebServicesServlet">
 			<!-- <property name="cmisVersion"><value>1.0</value></property> -->
