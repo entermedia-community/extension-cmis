@@ -42,5 +42,5 @@ files.deleteMatch( web +"/lib/streambuffer*.jar");
 files.deleteMatch( web +"/lib/stringtemplate*.jar");
 files.deleteMatch( web +"/lib/woodstox-core-asl*.jar");
 
-files.copyFileByMatch( tmp + "/WEB-INF/lib/*.jar", web + "/lib/");
+files.copyFileByMatch( tmp + "/lib/*.jar", web + "/lib/");
 
