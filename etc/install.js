@@ -22,26 +22,26 @@ log.add("3. REPLACE LIBS");
 var files = new FileUtils();
 files.deleteMatch( web + "/lib/extension-cmis*.jar");
 
-filles.deleteMatch("activation*.jar");
-filles.deleteMatch("antlr*.jar");
-filles.deleteMatch("antlr*.jar");
-filles.deleteMatch("chemistry*.jar");
-filles.deleteMatch("commons-lang*.jar");
-filles.deleteMatch("jaxb-api*.jar");
-filles.deleteMatch("jaxb-impl*.jar");
-filles.deleteMatch("jaxws-api*.jar");
-filles.deleteMatch("jaxws-rt*.jar");
-filles.deleteMatch("mimepull*.jar");
-filles.deleteMatch("resolver*.jar");
-filles.deleteMatch("saaj-api*.jar");
-filles.deleteMatch("saaj-impl*.jar");
-filles.deleteMatch("slf4j-api*.jar");
-filles.deleteMatch("slf4j-log4j12*.jar");
-filles.deleteMatch("stax-ex*.jar");
-filles.deleteMatch("stax2-api*.jar");
-filles.deleteMatch("streambuffer*.jar");
-filles.deleteMatch("stringtemplate*.jar");
-filles.deleteMatch("woodstox-core-asl*.jar");
+files.deleteMatch("activation*.jar");
+files.deleteMatch("antlr*.jar");
+files.deleteMatch("antlr*.jar");
+files.deleteMatch("chemistry*.jar");
+files.deleteMatch("commons-lang*.jar");
+files.deleteMatch("jaxb-api*.jar");
+files.deleteMatch("jaxb-impl*.jar");
+files.deleteMatch("jaxws-api*.jar");
+files.deleteMatch("jaxws-rt*.jar");
+files.deleteMatch("mimepull*.jar");
+files.deleteMatch("resolver*.jar");
+files.deleteMatch("saaj-api*.jar");
+files.deleteMatch("saaj-impl*.jar");
+files.deleteMatch("slf4j-api*.jar");
+files.deleteMatch("slf4j-log4j12*.jar");
+files.deleteMatch("stax-ex*.jar");
+files.deleteMatch("stax2-api*.jar");
+files.deleteMatch("streambuffer*.jar");
+files.deleteMatch("stringtemplate*.jar");
+files.deleteMatch("woodstox-core-asl*.jar");
 
 
 
