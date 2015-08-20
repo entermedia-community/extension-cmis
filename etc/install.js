@@ -45,6 +45,6 @@ files.deleteMatch( web +"/lib/woodstox-core-asl*.jar");
 
 files.deleteMatch( web +"/web.xml");
 
-files.copyFileByMatch( tmp + "web.xml", web + "/web.xml");
+files.copyFiles( tmp + "web.xml", web + "web.xml");
 files.copyFileByMatch( tmp + "/lib/*.jar", web + "/lib/");
 
