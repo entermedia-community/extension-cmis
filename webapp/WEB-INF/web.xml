@@ -37,7 +37,7 @@
   <listener>
         <listener-class>org.netevolved.cmis.CMISContextListener</listener-class>
     </listener>
-   
+<!--   
     <listener>
         <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
     </listener>
@@ -61,7 +61,7 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
+-->
     <servlet>
         <servlet-name>cmisatom10</servlet-name>
         <servlet-class>org.apache.chemistry.opencmis.server.impl.atompub.CmisAtomPubServlet</servlet-class>
@@ -99,7 +99,7 @@
         </init-param>
         <load-on-startup>2</load-on-startup>
     </servlet>
-
+<!--
     <servlet-mapping>
         <servlet-name>cmisws10</servlet-name>
         <url-pattern>/entermedia/servlets/services/*</url-pattern>
@@ -109,7 +109,7 @@
         <servlet-name>cmisws11</servlet-name>
         <url-pattern>/entermedia/servlets/services11/*</url-pattern>
     </servlet-mapping>
-
+-->
     <servlet-mapping>
         <servlet-name>cmisatom10</servlet-name>
         <url-pattern>/entermedia/servlets/atom/*</url-pattern>
