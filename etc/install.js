@@ -43,8 +43,8 @@ files.deleteMatch( web +"/lib/stringtemplate*.jar");
 files.deleteMatch( web +"/lib/woodstox-core-asl*.jar");
 
 
-files.deleteMatch( web +"/WEB-INF/web.xml");
+files.deleteMatch( web +"/web.xml");
 
-files.copyFileByMatch( tmp + "/web.xml", web + "web.xml");
+files.copyFileByMatch( tmp + "/web.xml", web + "/web.xml");
 files.copyFileByMatch( tmp + "/lib/*.jar", web + "/lib/");
 
