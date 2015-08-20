@@ -25,8 +25,8 @@ public class CMISContextListener implements ServletContextListener   {
 		HashMap map = new HashMap();
 		
 		map.put("login.1","test:test");
-		map.put("repository.test","/home/ian");
-		map.put("repository.test.readwrite","test");
+//		map.put("repository.test","/home/ian");
+//		map.put("repository.test.readwrite","test");
 		
 		
 		factory.init(map);
