@@ -4,7 +4,7 @@ importPackage( Packages.java.lang );
 importPackage( Packages.com.openedit.modules.update );
 
 
-var war = "http://dev.entermediasoftware.com/jenkins/job/extension-cmis/lastSuccessfulBuild/artifact/deploy/ROOT.war";
+var war = "http://dev.entermediasoftware.com/jenkins/job/extension-cmis/lastSuccessfulBuild/artifact/deploy/extension-cmis.zip";
 
 var root = moduleManager.getBean("root").getAbsolutePath();
 var web = root + "/WEB-INF";
@@ -12,11 +12,11 @@ var tmp = web + "/tmp";
 
 log.add("1. GET THE LATEST WAR FILE");
 var downloader = new Downloader();
-downloader.download( war, tmp + "/ROOT.war");
+downloader.download( war, tmp + "/extension-cmis.zip");
 
 log.add("2. UNZIP WAR FILE");
 var unziper = new ZipUtil();
-unziper.unzip(  tmp + "/ROOT.war",  tmp );
+unziper.unzip(  tmp + "/extension-cmis.zip",  tmp );
 
 log.add("3. REPLACE LIBS");
 var files = new FileUtils();
